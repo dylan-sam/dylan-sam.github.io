@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(window.location.search);
 let lang = urlParams.get('lang');  // from ?lang=fr
 
 if (!lang) {
-    lange = 'fr'
+    lang = 'fr'
 }
 
 const content_dir = 'contents/' + lang + '/';
