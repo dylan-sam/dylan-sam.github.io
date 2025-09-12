@@ -110,46 +110,27 @@ section .main-body{
     }
 }
 
-/* Make Google Translate look like a navbar link */
-#google_translate_element {
-  margin-left: 15px;
-  margin-top: 6px; /* aligns vertically with HOME links */
+/* Hide the default Google dropdown */
+.goog-te-banner-frame.skiptranslate,
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-gadget-simple {
+    display: none !important;
 }
 
-.goog-te-gadget {
-  font-size: 1rem !important; /* Bootstrap nav-link size */
-  font-family: "Mulish", sans-serif !important;
-  color: rgba(0, 0, 0, 0.55) !important; /* matches Bootstrap .nav-link */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+/* Ensure the custom button looks like navbar link */
+#translate-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.goog-te-gadget select {
-  border: none;
-  background: transparent;
-  color: rgba(0, 0, 0, 0.55);
-  font-size: 1rem;
-  font-family: "Mulish", sans-serif;
-  cursor: pointer;
+#translate-btn:hover {
+    color: rgba(0, 0, 0, 0.9);
 }
-
-/* Hover effect like nav-link */
-.goog-te-gadget select:hover {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-/* Hide Google logo & banner */
-.goog-logo-link, 
-.goog-te-gadget span {
-  display: none !important;
-}
-
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important; /* prevent layout shift */
-}
-
 
