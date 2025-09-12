@@ -110,31 +110,46 @@ section .main-body{
     }
 }
 
+/* Make Google Translate look like a navbar link */
 #google_translate_element {
-  margin-left: 10px;
-  margin-top: 3px;
+  margin-left: 15px;
+  margin-top: 6px; /* aligns vertically with HOME links */
 }
 
 .goog-te-gadget {
-  font-size: 12px !important;
+  font-size: 1rem !important; /* Bootstrap nav-link size */
   font-family: "Mulish", sans-serif !important;
-  color: #333 !important;
+  color: rgba(0, 0, 0, 0.55) !important; /* matches Bootstrap .nav-link */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.goog-te-gadget img {
-  display: none !important; /* hide small Google icon */
+.goog-te-gadget select {
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1rem;
+  font-family: "Mulish", sans-serif;
+  cursor: pointer;
 }
 
-.goog-logo-link {
-  display: none !important; /* hide "Powered by Google Translate" */
+/* Hover effect like nav-link */
+.goog-te-gadget select:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Hide Google logo & banner */
+.goog-logo-link, 
+.goog-te-gadget span {
+  display: none !important;
 }
 
 .goog-te-banner-frame.skiptranslate {
-  display: none !important; /* remove the big top banner */
-}
-body {
-  top: 0px !important; /* fix layout shift from banner removal */
+  display: none !important;
 }
 
+body {
+  top: 0px !important; /* prevent layout shift */
+}
 
 
