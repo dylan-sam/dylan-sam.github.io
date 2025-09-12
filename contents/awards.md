@@ -1,16 +1,4 @@
 
-- Outstanding Graduate Award (CUMT), 2025.
+- Excellence in Teaching, EPFL 2021-22, awarded while assisting Prof. Chizat Lénaïc in his first Analysis 1 course at EPFL.
 
-- National Scholarship for Graduate Student, 2024.
-
-- First-Prize Scholarship (CUMT), 2024.
-
-- First-Prize Scholarship (CUMT), 2023.
-
-- Freshman Scholarship (CUMT), 2022.
-
-- Outstanding Graduation Project Award (Jiangsu Province), 2022.
-
-- First-Prize Enterprise Scholarship (CUMT), 2020.
-
-- First-Prize Scholarship (CUMT), 2019.
+- Best Overall Performance, Gymnase de Chamblandes (High School) 2015.
