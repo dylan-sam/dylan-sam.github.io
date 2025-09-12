@@ -110,27 +110,3 @@ section .main-body{
     }
 }
 
-/* Hide the default Google dropdown */
-.goog-te-banner-frame.skiptranslate,
-.goog-logo-link,
-.goog-te-gadget span,
-.goog-te-gadget-simple {
-    display: none !important;
-}
-
-/* Ensure the custom button looks like navbar link */
-#translate-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-family: "Mulish", sans-serif;
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.55);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-#translate-btn:hover {
-    color: rgba(0, 0, 0, 0.9);
-}
-
