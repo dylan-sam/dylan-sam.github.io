@@ -5,7 +5,7 @@ Je suis actuellement doctorant en Mathématiques à l'EPFL (Lausanne, Suisse). J
 Email: dylan.samuelian@outlook.com
 
 #### Education
-PhD, Mathématiques, 2021-2026. \
+Doctorat, Mathématiques, 2021-2026. \
 Mineur en Informatique (30 ECTS), Université de Genève, 2020-2021. \
 Bachelor & Master (120 & 90 ECTS), Mathématiques, EPFL, 2015—2021. 
 
