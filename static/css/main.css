@@ -152,12 +152,4 @@ body {
   top: 0px !important; /* prevent layout shift */
 }
 
-/* Remove "Powered by Google Translate" text */
-.goog-logo-link {
-  display: none !important;
-}
-
-.goog-te-gadget span {
-  display: none !important;
-}
 
