@@ -1,10 +1,11 @@
 
 // Detect language from URL path
-let lang = 'fr'; // default
-if (window.location.pathname.startsWith('/en')) {
-    lang = 'en';
-}
+const urlParams = new URLSearchParams(window.location.search);
+let lang = urlParams.get('lang');  // from ?lang=fr
 
+if (!lang) {
+    lange = 'fr'
+}
 
 const content_dir = 'contents/' + lang + '/';
 const config_file = 'config.yml';
