@@ -1,8 +1,13 @@
 
+// Detect language from URL path
+let lang = 'en'; // default
+if (window.location.pathname.startsWith('/fr')) {
+    lang = 'fr';
+}
 
-const content_dir = 'contents/'
-const config_file = 'config.yml'
-const section_names = ['home', 'publications', 'awards']
+const content_dir = 'contents/' + lang + '/';
+const config_file = 'config.yml';
+const section_names = ['home', 'publications', 'awards'];
 
 
 window.addEventListener('DOMContentLoaded', event => {
