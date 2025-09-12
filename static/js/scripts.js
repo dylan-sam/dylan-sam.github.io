@@ -1,18 +1,19 @@
 
-// Detect language from URL path
-const urlParams = new URLSearchParams(window.location.search);
-let lang = urlParams.get('lang');  // from ?lang=fr
-
-if (!lang) {
-    lang = 'fr'
-}
-
-const content_dir = 'contents/' + lang + '/';
 const config_file = 'config.yml';
 const section_names = ['home', 'publications', 'awards'];
 
 
 window.addEventListener('DOMContentLoaded', event => {
+
+	// Detect language from URL path
+	const urlParams = new URLSearchParams(window.location.search);
+	let lang = urlParams.get('lang');  // from ?lang=fr
+
+	if (!lang) {
+		lang = 'fr'
+	}
+
+	let content_dir = 'contents/' + lang + '/';
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
