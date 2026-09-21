@@ -1,1 +1,1 @@
-This page contains my notes and PDF documents.
+This page contains semester projects, Master's projects and recreational mathematics seminars that I wrote during my studies, at a time when generative AI tools did not yet exist (or at least, not in the form of today's LLMs). I am making these notes available without any guarantee that everything is completely correct. Feel free to use them for non-commercial purposes, provided that you cite me (my full name, email address and website address are sufficient).
