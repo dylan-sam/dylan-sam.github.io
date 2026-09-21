@@ -18,6 +18,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.documentElement.lang = lang;
 
+    // Render the site-wide interface before binding navigation behavior.
+    if (!window.SiteComponents) {
+        throw new Error('Shared site components failed to load.');
+    }
+    window.SiteComponents.render({ activePage: contentPage });
+
     // Keep the selected language when navigating between pages and sections.
     document.querySelectorAll('[data-index-section]').forEach(link => {
         const section = link.dataset.indexSection;
@@ -79,6 +85,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (pageTitle) {
                     document.title = pageTitle + ' — Dylan Samuelian';
                 }
+            }
+
+            const descriptionKey = contentPage ? contentPage + '-meta-description' : 'meta-description';
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && yml[descriptionKey]) {
+                metaDescription.setAttribute('content', yml[descriptionKey]);
             }
         })
         .catch(error => console.error(error));

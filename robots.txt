@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dylan-sam.github.io/sitemap.xml
