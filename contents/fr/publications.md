@@ -1,8 +1,8 @@
-#### Pré-Publications
+- Samuelian, D. Nonexistence of finite-time blow-up for the equivariant harmonic map heat flow from $B^2$ to $S^2$. ArXiv (preprint, 2026). [https://doi.org/10.48550/arXiv.2606.24555](https://doi.org/10.48550/arXiv.2606.24555)
 
-- <strong>Dylan Samuelian</strong>, 2025, On blow-up trees for the harmonic map heat flow from $B^2$ to $S^2$. [[arXiv]](https://arxiv.org/abs/2507.23583)
+- Samuelian, D. On blow-up trees for the harmonic map heat flow from $B^2$ to $S^2$. Calc. Var. 65, 238 (2026). [https://doi.org/10.1007/s00526-026-03396-0](https://doi.org/10.1007/s00526-026-03396-0)
 
-- <strong>Dylan Samuelian</strong>, 2024, Construction of blow-up solutions for the focusing energy-critical nonlinear wave equation in $\mathbb R^4$ and $\mathbb R^5$. [[arXiv]](https://arxiv.org/abs/2407.08444)
+- Samuelian, D. Construction of Blow-Up Solutions for the Focusing Energy-Critical Nonlinear Wave Equation in $\mathbb R^4$ and $\mathbb R^5$. Ann. Henri Poincaré (2026). [https://doi.org/10.1007/s00023-026-01664-5](https://doi.org/10.1007/s00023-026-01664-5)
 
 
 
