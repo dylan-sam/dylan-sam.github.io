@@ -7,7 +7,7 @@ Email: dylan.samuelian@outlook.com
 #### Education
 Doctorat, Mathématiques, 2021-2026. \
 Certificat Complémentaire en Informatique (30 ECTS), Université de Genève, 2020-2021. \
-Bachelor & Master (120 & 90 ECTS), Mathématiques, EPFL, 2015—2021. 
+Bachelor & Master (120 & 90 ECTS), Mathématiques, EPFL, 2015-2021.
 
 #### Recherche
 Ma recherche s'articule autour de l'analyse asymptotique des solutions à énergie finie (aussi dites de Type II) à des équations non linéaires dispersives et paraboliques, sous certaines hypothèses de symétrie.

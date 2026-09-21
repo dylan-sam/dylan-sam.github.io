@@ -8,7 +8,7 @@ Email: dylan.samuelian@outlook.com
 #### Education
 PhD, Mathematics, 2021-2026. \
 Complementary Certificate in Computer Science (30 ECTS), University of Geneva, 2020-2021. \
-Bachelor & Master (120 & 90 ECTS), Mathematics, EPFL, 2015—2021. 
+Bachelor & Master (120 & 90 ECTS), Mathematics, EPFL, 2015-2021.
 
 #### Research Interests
 My research focuses on the asymptotic analysis of finite-energy solutions (also known as Type II solutions) to non-linear dispersive and parabolic equations, under certain symmetry assumptions.

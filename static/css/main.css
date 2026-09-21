@@ -14,6 +14,25 @@
     background-color: var(--h-title-color);
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .top-section {
     position: relative;
     padding: 10rem 0;
@@ -24,6 +43,43 @@
 
 .top-section h2 {
     font-weight: 400;
+}
+
+.miscellaneous-top-section {
+    height: 20rem;
+    padding: 9rem 0 4rem;
+}
+
+.miscellaneous-content {
+    min-height: calc(100vh - 29rem);
+    padding: 4rem 0;
+}
+
+.miscellaneous-section {
+    padding: 4rem 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .top-section .top-section-content {
@@ -107,6 +163,10 @@ section .main-body{
 @media screen and (max-width: 991px) {
     #avatar {
         margin: 0;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
     }
 }
 
