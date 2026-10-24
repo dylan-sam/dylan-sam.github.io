@@ -6,18 +6,35 @@ home:
   urls:
     fr: /
     en: /en/
+  navigation_urls:
+    fr: /#home
+    en: /en/#home
 publications:
   label_key: publications
   priority: 0.9
+  sitemap: false
   urls:
     fr: /publications/
     en: /en/publications/
+  navigation_urls:
+    fr: /#publications
+    en: /en/#publications
+  redirect_urls:
+    fr: /#publications
+    en: /en/#publications
 awards:
   label_key: awards
   priority: 0.8
+  sitemap: false
   urls:
     fr: /awards/
     en: /en/awards/
+  navigation_urls:
+    fr: /#awards
+    en: /en/#awards
+  redirect_urls:
+    fr: /#awards
+    en: /en/#awards
 notes:
   label_key: notes
   priority: 0.8

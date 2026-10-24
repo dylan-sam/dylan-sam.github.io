@@ -1,6 +1,9 @@
 {% assign current_route = site.data.routes[page.redirect_key] %}
+{% assign redirect_urls = current_route.redirect_urls | default: current_route.urls %}
+{% assign redirect_language = page.redirect_lang | default: 'fr' %}
+{% assign fallback_url = redirect_urls[redirect_language] %}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ redirect_language }}">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,15 +12,17 @@
     <script>
         (() => {
             const params = new URLSearchParams(window.location.search);
-            const target = params.get('lang') === 'en'
-                ? {{ current_route.urls.en | relative_url | jsonify }}
-                : {{ current_route.urls.fr | relative_url | jsonify }};
-            window.location.replace(target + window.location.hash);
+            const language = params.get('lang') || {{ redirect_language | jsonify }};
+            const target = language === 'en'
+                ? {{ redirect_urls.en | relative_url | jsonify }}
+                : {{ redirect_urls.fr | relative_url | jsonify }};
+            const preservedHash = target.includes('#') ? '' : window.location.hash;
+            window.location.replace(target + preservedHash);
         })();
     </script>
-    <noscript><meta http-equiv="refresh" content="0; url={{ current_route.urls.fr | relative_url }}" /></noscript>
+    <noscript><meta http-equiv="refresh" content="0; url={{ fallback_url | relative_url }}" /></noscript>
 </head>
 <body>
-    <p>Cette page a changé d’adresse. <a href="{{ current_route.urls.fr | relative_url }}">Continuer vers le site</a>.</p>
+    <p>Cette page a changé d’adresse. <a href="{{ fallback_url | relative_url }}">Continuer vers le site</a>.</p>
 </body>
 </html>

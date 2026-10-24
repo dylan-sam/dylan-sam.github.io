@@ -9,11 +9,11 @@ layout: null
 {% assign en = site.data.i18n.en %}
 ## French pages
 
-{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}- [{{ fr[route.label_key] }}]({{ route.urls.fr | absolute_url }})
+{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}{% assign target_urls = route.navigation_urls | default: route.urls %}- [{{ fr[route.label_key] }}]({{ target_urls.fr | absolute_url }})
 {% endfor %}
 ## English pages
 
-{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}- [{{ en[route.label_key] }}]({{ route.urls.en | absolute_url }})
+{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}{% assign target_urls = route.navigation_urls | default: route.urls %}- [{{ en[route.label_key] }}]({{ target_urls.en | absolute_url }})
 {% endfor %}
 ## Identity
 

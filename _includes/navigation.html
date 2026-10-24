@@ -17,9 +17,10 @@ require copying markup or updating URLs in several templates.
             <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                 {% for route_key in site.data.navigation.primary %}
                     {% assign route = site.data.routes[route_key] %}
+                    {% assign navigation_urls = route.navigation_urls | default: route.urls %}
                     <li class="nav-item">
                         <a class="nav-link me-lg-3{% if page.nav_key == route_key %} active{% endif %}"
-                            href="{{ route.urls[page.lang] | relative_url }}"{% if page.nav_key == route_key %} aria-current="page"{% endif %}>{{ t[route.label_key] | escape }}</a>
+                            href="{{ navigation_urls[page.lang] | relative_url }}"{% if page.nav_key == route_key %} aria-current="page"{% endif %}>{{ t[route.label_key] | escape }}</a>
                     </li>
                 {% endfor %}
 

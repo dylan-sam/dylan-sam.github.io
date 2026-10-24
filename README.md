@@ -15,7 +15,7 @@ This repository contains Dylan Samuelian's bilingual academic website. Jekyll ge
 - `static`: stylesheets, Bootstrap, images and PDF documents.
 - `sitemap.xml`, `robots.txt` and `llms.txt`: crawler discovery files.
 
-The navigation, language switcher, alternate-language metadata, sitemap and `llms.txt` are generated from the shared route registry. This avoids duplicating URLs across templates and keeps the site consistent as it grows.
+The navigation, language switcher, alternate-language metadata, sitemap and `llms.txt` are generated from the shared route registry. Home, Publications and Awards are sections of the main page; their navigation entries use anchors, while legacy standalone URLs redirect to the corresponding section. This avoids duplicating URLs across templates and keeps the site consistent as it grows.
 
 ## Adding a page
 
