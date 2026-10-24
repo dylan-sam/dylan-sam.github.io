@@ -1,0 +1,16 @@
+{% assign t = site.data.i18n[page.lang] %}
+<footer class="bg-bottom text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            {% comment %}Social profiles are maintained in one shared data file.{% endcomment %}
+            <div class="footer-links mb-2">
+                {% for profile in site.data.social %}
+                    <a href="{{ profile.url }}" target="_blank" rel="noopener noreferrer">{{ profile.label | escape }}</a>{% unless forloop.last %}
+                    <span aria-hidden="true">·</span>
+                    {% endunless %}
+                {% endfor %}
+            </div>
+            <a href="https://github.com/dylan-sam/dylan-sam.github.io/blob/main/LICENSE">{{ t.license | escape }}</a>
+        </div>
+    </div>
+</footer>

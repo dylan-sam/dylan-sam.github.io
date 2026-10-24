@@ -1,0 +1,5 @@
+# Footer links are data-driven so new profiles do not require template changes.
+- label: LinkedIn
+  url: https://www.linkedin.com/in/dylan-samuelian/
+- label: Math StackExchange
+  url: https://math.stackexchange.com/users/272494/desura

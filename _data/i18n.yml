@@ -1,0 +1,34 @@
+# All text rendered by shared interface components belongs here.
+# Page-specific prose remains in the localized _sections documents.
+fr:
+  home: ACCUEIL
+  publications: PUBLICATIONS
+  awards: PRIX
+  miscellaneous: DIVERS
+  languages: LANGUES
+  notes: Notes et PDF
+  music_dance: Musique et danse
+  english: Anglais
+  french: Français
+  menu: Menu
+  navigation: Navigation principale
+  license: Licence
+  photo_alt: Portrait de Dylan Samuelian
+  job_title: Docteur en mathématiques
+  profile_description: Mathématicien spécialisé dans l'analyse asymptotique des équations aux dérivées partielles dispersives et paraboliques.
+en:
+  home: HOME
+  publications: PUBLICATIONS
+  awards: AWARDS
+  miscellaneous: MISCELLANEOUS
+  languages: LANGUAGES
+  notes: Notes & PDFs
+  music_dance: Music & Dance
+  english: English
+  french: Français
+  menu: Menu
+  navigation: Main navigation
+  license: License
+  photo_alt: Portrait of Dylan Samuelian
+  job_title: Ph.D. in Mathematics
+  profile_description: Mathematician specializing in the asymptotic analysis of dispersive and parabolic partial differential equations.

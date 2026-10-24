@@ -1,0 +1,6 @@
+---
+section_key: notes
+lang: fr
+---
+
+Cette page contient des projets de semestre, projets de master ou des séminaires de mathématiques ludiques que j'ai écrits durant mes études, à une époque où les outils d'IA génératifs n'existaient pas encore (ou en tout cas, pas sous la forme des LLMs d'aujourd'hui). Je mets à disposition ces notes, sans garantie que tout soit exactement correct. N'hésitez pas à les utiliser pour des usages non-commerciaux, à condition de me citer (mon nom complet, mon adresse email et l'adresse de mon site web suffisent).

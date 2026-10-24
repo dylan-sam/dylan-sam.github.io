@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% assign current_route = site.data.routes[page.nav_key] %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ page.description | escape }}" />
+    <meta name="author" content="{{ site.title | escape }}" />
+    <title>{{ page.title | escape }}</title>
+
+    {% comment %}Canonical and language-alternate URLs come from the shared route registry.{% endcomment %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="alternate" hreflang="fr" href="{{ current_route.urls.fr | absolute_url }}" />
+    <link rel="alternate" hreflang="en" href="{{ current_route.urls.en | absolute_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ current_route.urls.fr | absolute_url }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:description" content="{{ page.description | escape }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ site.data.profile.image | absolute_url }}" />
+
+    <link rel="icon" type="image/x-icon" href="{{ '/static/assets/favicon.ico' | relative_url }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link href="{{ '/static/css/styles.css' | relative_url }}" rel="stylesheet" />
+    <link href="{{ '/static/css/main.css' | relative_url }}" rel="stylesheet" />
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEnvironments: true,
+                tags: 'ams'
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="{{ '/static/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
+    {% comment %}Only profile pages expose Person structured data to search engines.{% endcomment %}
+    {% if page.profile_page %}
+    {% assign t = site.data.i18n[page.lang] %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page.title | jsonify }},
+        "description": {{ page.description | jsonify }},
+        "mainEntity": {
+            "@type": "Person",
+            "name": {{ site.title | jsonify }},
+            "url": {{ page.url | absolute_url | jsonify }},
+            "image": {{ site.data.profile.image | absolute_url | jsonify }},
+            "jobTitle": {{ t.job_title | jsonify }},
+            "description": {{ t.profile_description | jsonify }},
+            "affiliation": {
+                "@type": "Organization",
+                "name": {{ site.data.profile.affiliation.name | jsonify }},
+                "url": {{ site.data.profile.affiliation.url | jsonify }}
+            },
+            "sameAs": [
+                {% for profile in site.data.social %}
+                {{ profile.url | jsonify }}{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
+        }
+    }
+    </script>
+    {% endif %}
+
+    {% if page.legacy_home_routes %}{% include legacy-home-routing.html %}{% endif %}
+</head>
+
+<body id="page-top">
+    {% include navigation.html %}
+
+    <header class="top-section{% unless page.is_home %} miscellaneous-top-section{% endunless %}"
+        style="background-image: url('{{ '/static/assets/img/background.jpg' | relative_url }}');">
+        <div class="top-section-content">
+            <div class="container px-5">
+                <h1 class="text-white display-3 lh-1 font-alt">{{ page.hero_title | escape }}</h1>
+            </div>
+        </div>
+    </header>
+
+    {% if page.show_avatar %}
+    {% assign t = site.data.i18n[page.lang] %}
+    <div class="container px-5">
+        <div id="avatar">
+            <img class="shadow" src="{{ site.data.profile.image | relative_url }}"
+                alt="{{ t.photo_alt | escape }}" />
+        </div>
+    </div>
+    {% endif %}
+
+    {% comment %}
+    Page front matter defines section order; reusable Markdown documents provide
+    localized content, so layout markup stays identical across languages and pages.
+    {% endcomment %}
+    {% assign localized_sections = site.sections | where: 'lang', page.lang %}
+    <main id="main-content">
+        {% for configured_section in page.sections %}
+            {% assign content_section = localized_sections | where: 'section_key', configured_section.key | first %}
+            <section class="bg-gradient-primary-to-secondary-{{ configured_section.theme }}{% if page.is_home %} mt5 md5{% else %} miscellaneous-section{% endif %}"
+                id="{{ configured_section.id | default: configured_section.key }}">
+                <div class="container px-5">
+                    {% if configured_section.heading %}
+                    <header>
+                        <h2>{{ configured_section.heading | escape }}</h2>
+                    </header>
+                    {% endif %}
+                    <div class="main-body">
+                        {{ content_section.content | markdownify }}
+                    </div>
+                </div>
+            </section>
+        {% endfor %}
+    </main>
+
+    {% include footer.html %}
+</body>
+
+</html>

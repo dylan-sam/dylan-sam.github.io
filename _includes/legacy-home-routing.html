@@ -1,0 +1,29 @@
+{% comment %}Preserve bookmarks that target sections of the former one-page site.{% endcomment %}
+<script>
+    (() => {
+        const params = new URLSearchParams(window.location.search);
+        const language = params.get('lang') === 'en' ? 'en' : 'fr';
+        const routes = {
+            fr: {
+                '#page-top': {{ site.data.routes.home.urls.fr | relative_url | jsonify }},
+                '#home': {{ site.data.routes.home.urls.fr | relative_url | jsonify }},
+                '#publications': {{ site.data.routes.publications.urls.fr | relative_url | jsonify }},
+                '#awards': {{ site.data.routes.awards.urls.fr | relative_url | jsonify }}
+            },
+            en: {
+                '#page-top': {{ site.data.routes.home.urls.en | relative_url | jsonify }},
+                '#home': {{ site.data.routes.home.urls.en | relative_url | jsonify }},
+                '#publications': {{ site.data.routes.publications.urls.en | relative_url | jsonify }},
+                '#awards': {{ site.data.routes.awards.urls.en | relative_url | jsonify }}
+            }
+        };
+        const target = routes[language][window.location.hash]
+            || (params.has('lang') && language === 'en' ? routes.en['#home'] : null);
+
+        if (target) {
+            window.location.replace(target);
+        } else if (params.has('lang')) {
+            window.history.replaceState({}, '', routes.fr['#home'] + window.location.hash);
+        }
+    })();
+</script>

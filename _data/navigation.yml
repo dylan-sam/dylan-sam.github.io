@@ -1,0 +1,11 @@
+# Ordered navigation model. Add a route key here to expose a page in the ribbon.
+primary:
+  - home
+  - publications
+  - awards
+dropdowns:
+  - key: miscellaneous
+    label_key: miscellaneous
+    items:
+      - notes
+      - music

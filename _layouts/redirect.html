@@ -1,0 +1,23 @@
+{% assign current_route = site.data.routes[page.redirect_key] %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Redirection — Dylan Samuelian</title>
+    <script>
+        (() => {
+            const params = new URLSearchParams(window.location.search);
+            const target = params.get('lang') === 'en'
+                ? {{ current_route.urls.en | relative_url | jsonify }}
+                : {{ current_route.urls.fr | relative_url | jsonify }};
+            window.location.replace(target + window.location.hash);
+        })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url={{ current_route.urls.fr | relative_url }}" /></noscript>
+</head>
+<body>
+    <p>Cette page a changé d’adresse. <a href="{{ current_route.urls.fr | relative_url }}">Continuer vers le site</a>.</p>
+</body>
+</html>

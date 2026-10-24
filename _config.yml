@@ -1,0 +1,21 @@
+title: Dylan Samuelian
+description: Academic website of Dylan Samuelian, Ph.D. in Mathematics.
+url: https://dylan-sam.github.io
+baseurl: ""
+timezone: Europe/Zurich
+markdown: kramdown
+strict_front_matter: true
+
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+collections:
+  # Sections are content fragments rendered by pages, not standalone URLs.
+  sections:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

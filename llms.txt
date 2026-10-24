@@ -1,0 +1,24 @@
+---
+layout: null
+---
+# Dylan Samuelian
+
+> Bilingual academic website of Dylan Samuelian, Ph.D. in Mathematics. His research concerns the asymptotic analysis of finite-energy solutions to nonlinear dispersive and parabolic equations under symmetry assumptions.
+
+{% assign fr = site.data.i18n.fr %}
+{% assign en = site.data.i18n.en %}
+## French pages
+
+{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}- [{{ fr[route.label_key] }}]({{ route.urls.fr | absolute_url }})
+{% endfor %}
+## English pages
+
+{% for route_entry in site.data.routes %}{% assign route = route_entry[1] %}- [{{ en[route.label_key] }}]({{ route.urls.en | absolute_url }})
+{% endfor %}
+## Identity
+
+- Name: Dylan Samuelian
+- Field: Mathematics; partial differential equations
+- Affiliation: École polytechnique fédérale de Lausanne (EPFL)
+{% for profile in site.data.social %}- {{ profile.label }}: {{ profile.url }}
+{% endfor %}

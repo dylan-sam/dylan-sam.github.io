@@ -1,0 +1,62 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign current_route = site.data.routes[page.nav_key] %}
+{% comment %}
+Navigation labels, order and destinations live in _data so adding a page does not
+require copying markup or updating URLs in several templates.
+{% endcomment %}
+<nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav"
+    aria-label="{{ t.navigation | escape }}">
+    <div class="container px-5">
+        <a class="navbar-brand fw-bold" href="{{ site.data.routes.home.urls[page.lang] | relative_url }}">{{ site.title | escape }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="{{ t.menu | escape }}">
+            {{ t.menu | upcase | escape }}
+            <i class="bi-list" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                {% for route_key in site.data.navigation.primary %}
+                    {% assign route = site.data.routes[route_key] %}
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3{% if page.nav_key == route_key %} active{% endif %}"
+                            href="{{ route.urls[page.lang] | relative_url }}"{% if page.nav_key == route_key %} aria-current="page"{% endif %}>{{ t[route.label_key] | escape }}</a>
+                    </li>
+                {% endfor %}
+
+                {% for dropdown in site.data.navigation.dropdowns %}
+                    {% assign dropdown_active = false %}
+                    {% if dropdown.items contains page.nav_key %}{% assign dropdown_active = true %}{% endif %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle{% if dropdown_active %} active{% endif %}"
+                            href="#" id="{{ dropdown.key }}Dropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">{{ t[dropdown.label_key] | escape }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="{{ dropdown.key }}Dropdown">
+                            {% for route_key in dropdown.items %}
+                                {% assign route = site.data.routes[route_key] %}
+                                <li>
+                                    <a class="dropdown-item{% if page.nav_key == route_key %} active{% endif %}"
+                                        href="{{ route.urls[page.lang] | relative_url }}"{% if page.nav_key == route_key %} aria-current="page"{% endif %}>{{ t[route.label_key] | escape }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">{{ t.languages | escape }}</a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item{% if page.lang == 'en' %} active{% endif %}"
+                                href="{{ current_route.urls.en | relative_url }}" hreflang="en" lang="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>{{ t.english | escape }}</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item{% if page.lang == 'fr' %} active{% endif %}"
+                                href="{{ current_route.urls.fr | relative_url }}" hreflang="fr" lang="fr"{% if page.lang == 'fr' %} aria-current="page"{% endif %}>{{ t.french | escape }}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

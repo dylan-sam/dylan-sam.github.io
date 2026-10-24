@@ -1,0 +1,5 @@
+# Shared identity metadata used by page chrome and structured data.
+image: /static/assets/img/photo.jpg
+affiliation:
+  name: École polytechnique fédérale de Lausanne (EPFL)
+  url: https://www.epfl.ch/

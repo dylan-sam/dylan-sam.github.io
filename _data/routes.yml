@@ -1,0 +1,32 @@
+# Canonical route registry. Navigation, language switching, legacy redirects,
+# the sitemap and llms.txt all read their URLs from this file.
+home:
+  label_key: home
+  priority: 1.0
+  urls:
+    fr: /
+    en: /en/
+publications:
+  label_key: publications
+  priority: 0.9
+  urls:
+    fr: /publications/
+    en: /en/publications/
+awards:
+  label_key: awards
+  priority: 0.8
+  urls:
+    fr: /awards/
+    en: /en/awards/
+notes:
+  label_key: notes
+  priority: 0.8
+  urls:
+    fr: /notes/
+    en: /en/notes/
+music:
+  label_key: music_dance
+  priority: 0.7
+  urls:
+    fr: /music-dance/
+    en: /en/music-dance/
