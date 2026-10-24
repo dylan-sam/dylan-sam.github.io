@@ -15,4 +15,6 @@ Complementary Certificate in Computer Science (30 ECTS), University of Geneva, 2
 Bachelor & Master (120 & 90 ECTS), Mathematics, EPFL, 2015-2021.
 
 #### Research Interests
-My research focuses on the asymptotic analysis of finite-energy solutions (also known as Type II solutions) to non-linear dispersive and parabolic equations, under certain symmetry assumptions.
+My research focuses on the asymptotic analysis of finite-energy solutions (also known as Type II solutions) to non-linear dispersive and parabolic equations, under certain symmetry assumptions. Studying such equations contributes to a better understanding of physical phenomena such as rogue waves.
+
+Closely related mathematical models also arise in technological applications, notably in describing defects in liquid crystals used in LCD technology, or in studying and optimizing the data-writing mechanism in magnetic devices such as MRAM.

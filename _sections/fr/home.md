@@ -15,4 +15,6 @@ Certificat Complémentaire en Informatique (30 ECTS), Université de Genève, 20
 Bachelor & Master (120 & 90 ECTS), Mathématiques, EPFL, 2015-2021.
 
 #### Recherche
-Ma recherche s'articule autour de l'analyse asymptotique des solutions à énergie finie (aussi dites de Type II) à des équations non linéaires dispersives et paraboliques, sous certaines hypothèses de symétrie.
+Ma recherche s’articule autour de l’analyse asymptotique des solutions à énergie finie (aussi dites de Type II) à des équations non linéaires dispersives et paraboliques, sous certaines hypothèses de symétrie. L’étude de telles équations contribue à mieux comprendre des phénomènes physiques tels que les vagues scélérates.
+
+Ces modèles ont également des applications technologiques : notamment pour décrire les défauts optiques dans la technologie de cristaux liquides des écrans LCD, ainsi que pour étudier et optimiser les mécanismes d'écriture de données dans des appareils magnétiques tels que les MRAM.
