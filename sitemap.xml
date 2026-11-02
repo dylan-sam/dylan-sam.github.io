@@ -1,22 +1,21 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% assign languages = 'fr,en' | split: ',' %}
-{% for route_entry in site.data.routes %}
-    {% assign route = route_entry[1] %}
-    {% unless route.sitemap == false %}
-    {% for language in languages %}
-    <url>
-        <loc>{{ route.urls[language] | absolute_url }}</loc>
-        <xhtml:link rel="alternate" hreflang="fr" href="{{ route.urls.fr | absolute_url }}" />
-        <xhtml:link rel="alternate" hreflang="en" href="{{ route.urls.en | absolute_url }}" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="{{ route.urls.fr | absolute_url }}" />
-        <priority>{{ route.priority }}</priority>
-    </url>
-    {% endfor %}
-    {% endunless %}
-{% endfor %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dylan-sam.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://dylan-sam.github.io/en/</loc>
+  </url>
+  <url>
+    <loc>https://dylan-sam.github.io/notes/</loc>
+  </url>
+  <url>
+    <loc>https://dylan-sam.github.io/en/notes/</loc>
+  </url>
+  <url>
+    <loc>https://dylan-sam.github.io/music-dance/</loc>
+  </url>
+  <url>
+    <loc>https://dylan-sam.github.io/en/music-dance/</loc>
+  </url>
 </urlset>
