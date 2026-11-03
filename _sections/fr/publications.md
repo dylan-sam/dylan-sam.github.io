@@ -3,6 +3,8 @@ section_key: publications
 lang: fr
 ---
 
+- Samuelian, D. On blow-up dynamics for the nonlinear wave equation and the harmonic map heat flow (Publication No. 11308) [PhD thesis, EPFL, 2026; Supervised by J. Krieger]. [https://doi.org/10.5075/epfl-thesis-11308](https://doi.org/10.5075/epfl-thesis-11308)
+
 - Samuelian, D. Nonexistence of finite-time blow-up for the equivariant harmonic map heat flow from $B^2$ to $S^2$. ArXiv (preprint, 2026). [https://doi.org/10.48550/arXiv.2606.24555](https://doi.org/10.48550/arXiv.2606.24555)
 
 - Samuelian, D. On blow-up trees for the harmonic map heat flow from $B^2$ to $S^2$. Calc. Var. 65, 238 (2026). [https://doi.org/10.1007/s00526-026-03396-0](https://doi.org/10.1007/s00526-026-03396-0)
