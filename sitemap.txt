@@ -4,3 +4,5 @@ https://dylan-sam.github.io/notes/
 https://dylan-sam.github.io/en/notes/
 https://dylan-sam.github.io/music-dance/
 https://dylan-sam.github.io/en/music-dance/
+https://dylan-sam.github.io/programming/
+https://dylan-sam.github.io/en/programming/

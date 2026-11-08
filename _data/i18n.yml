@@ -8,6 +8,7 @@ fr:
   languages: LANGUES
   notes: Notes et PDF
   music_dance: Musique et danse
+  programming: Programmation
   english: Anglais
   french: Français
   menu: Menu
@@ -24,6 +25,7 @@ en:
   languages: LANGUAGES
   notes: Notes & PDFs
   music_dance: Music & Dance
+  programming: Programming
   english: English
   french: Français
   menu: Menu

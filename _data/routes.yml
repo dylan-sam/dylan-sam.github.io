@@ -40,3 +40,8 @@ music:
   urls:
     fr: /music-dance/
     en: /en/music-dance/
+programming:
+  label_key: programming
+  urls:
+    fr: /programming/
+    en: /en/programming/

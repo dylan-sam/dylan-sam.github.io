@@ -5,7 +5,7 @@ lang: en
 
 - **Math Outreach 2025-2026.** I took part in EPFL's “Math Outreach” doctoral school course, taught by Dr. Xavier Morvan. Under his supervision, I prepared an accessible presentation of my doctoral thesis with the aim of presenting it to secondary-school or high-school classes, followed by a science outreach discussion with the students about mathematics and the profession of mathematical researcher. Several presentations were organized in schools throughout the region. As part of the same initiative, I also co-led the algebraic topology workshop described below on several occasions.
 
-- **High School Students' Day 2025.** I participated as a speaker for EPFL's mathematics faculty at the High School Students' Day in November 2025. I co-led a recreational algebraic topology workshop about the [problem of hanging pictures with two nails](https://www.youtube.com/watch?v=23GYE7Ve9xM&feature=youtu.be) in such a way that removing either nail causes the picture to fall.
+- **High School Students' Day 2025-2026.** I participated as a speaker for EPFL's mathematics faculty at the High School Students' Day in November 2025 and 2026. I co-led a recreational algebraic topology workshop about the [problem of hanging pictures with two nails](https://www.youtube.com/watch?v=23GYE7Ve9xM&feature=youtu.be) in such a way that removing either nail causes the picture to fall.
 
 - [**Bachelor Seminar: Positional Games on Hypergraphs**](/static/assets/prj/Dylan%20Samuelian%20-%20Tic-Tac-Toe.pdf). These are notes I wrote for a recreational mathematics seminar aimed at first-year Bachelor's students. The seminar, held on March 13, 2019, covered winning strategies for Tic-Tac-Toe on an $n \times n$ grid and on an infinite grid.
 
